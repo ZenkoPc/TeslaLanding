@@ -1,0 +1,35 @@
+---
+import ChargeSection from '../components/ChargeSection.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Model3Section from '../components/Model3Section.astro';
+import ModelXSection from '../components/ModelXSection.astro';
+import ModelYSection from '../components/ModelYSection.astro';
+import Powerwall from '../components/Powerwall.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tesla Home">
+	<Header />
+	
+	<main class="relative snap-y snap-mandatory w-full h-screen overflow-x-hidden overflow-auto">
+		<div class="snap-center" id="Hero">
+			<HeroSection />
+		</div>
+		<div class="snap-center" id="ModelY">
+			<ModelYSection />
+		</div>
+		<div class="snap-center" id="ModelX">
+			<ModelXSection />
+		</div>
+		<div class="snap-center" id="Model3">
+			<Model3Section />
+		</div>
+		<div class="snap-center" id="Powerwall">
+			<Powerwall />
+		</div>
+		<div class="snap-center" id="Charge">
+			<ChargeSection />
+		</div>
+	</main>
+</Layout>

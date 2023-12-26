@@ -1,0 +1,30 @@
+---
+interface Props {
+    color: string
+    title: string
+    subtitle: string
+}
+
+const { color, title, subtitle } = Astro.props
+const textColor = `text-${color}`
+
+---
+
+<section data-header-color={color} class="landing-section transition-all duration-300 w-screen h-screen text-center relative overflow-hidden">
+    <div class="z-30 relative h-full flex flex-col">
+        <header class={`${textColor}`}>
+            <h2 class="pt-40 text-[40px] font-medium">
+                {title}
+            </h2>
+            <p class="text-sm">
+                {subtitle}
+            </p>
+        </header>
+        <footer class="flex flex-grow pb-20 flex-nowrap justify-end flex-col">
+            <slot name="buttons" />
+        </footer>
+    </div>
+    <div class="absolute top-0 bottom-0 z-10 w-full">
+        <slot name="background" />
+    </div>
+</section>
