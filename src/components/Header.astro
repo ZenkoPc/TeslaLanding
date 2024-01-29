@@ -107,7 +107,7 @@
             const { isIntersecting } = entry
             if(isIntersecting){
                 const color = entry.target.getAttribute('data-header-color')
-                $header.style.color = color
+                $header.style.color = color ? color : ""
                 console.log(color) 
             }
         })
